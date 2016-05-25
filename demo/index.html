@@ -1,0 +1,201 @@
+<html>
+<head>
+  <link rel="stylesheet" href="./dist/css/space-cadet.css">
+  <link rel="stylesheet" href="./demo-style.css">
+</head>
+<body class="background">
+
+  <div class="well-inverse" style="width:900px; margin:2em auto;">
+
+    <div class="title-fancy">
+      <span>title.exe</span>
+    </div>
+
+    <div style="padding:10px;">
+      <h1 style="text-align:center;">Space Cadet</h1>
+      <h3 class="gr" style="text-align:center;">written by Chris Anselmo</h3>
+      <hr />
+      <p style="font-size:12px;line-height:1.3em;">
+        <b>Space Cadet</b> is a framework in progress for developing nostolgic websites that
+        mimic the visual presentation of older versions of the Windows operating system. This
+        project is meant to serve as an easy way for web developers to use modern web technologies
+        to build web interfaces that resemble the styles of computers during the late 90's. This project
+        is very much a work in progress, which you can follow at the <a href="">github page</a>.
+      </p>
+    </div>
+
+  </div>
+
+  <div class="well-inverse" style="width:900px; margin:0 auto;">
+
+    <div class="title-fancy">
+      <span>controls.exe</span>
+    </div>
+
+    <div style="padding:10px;">
+
+        <h2>Buttons</h2>
+        There are three sizes of buttons you can use:
+        <code class="well">
+  <span class="cm"><span class="gr">&lt;</span>!-- Small buttons --<span class="gr">&gt;</span></span>
+  <span class="gr">&lt;</span>a <b>class</b>=<span class="st">"button-small"</span><span class="gr">&gt;</span><span class="bl">button-small</span><span class="gr">&lt;</span>/a<span class="gr">&gt;</span>
+  <span class="gr">&lt;</span>a <b>class</b>=<span class="st">"button-small disabled"</span><span class="gr">&gt;</span><span class="bl">button-small</span><span class="gr">&lt;</span>/a<span class="gr">&gt;</span>
+
+  <span class="cm"><span class="gr">&lt;</span>!-- Regular buttons --<span class="gr">&gt;</span></span>
+  <span class="gr">&lt;</span>a <b>class</b>=<span class="st">"button"</span><span class="gr">&gt;</span><span class="bl">button</span><span class="gr">&lt;</span>/a<span class="gr">&gt;</span>
+  <span class="gr">&lt;</span>a <b>class</b>=<span class="st">"button disabled"</span><span class="gr">&gt;</span><span class="bl">button</span><span class="gr">&lt;</span>/a<span class="gr">&gt;</span>
+
+  <span class="cm"><span class="gr">&lt;</span>!-- Large buttons --<span class="gr">&gt;</span></span>
+  <span class="gr">&lt;</span>a <b>class</b>=<span class="st">"button-large"</span><span class="gr">&gt;</span><span class="bl">button</span><span class="gr">&lt;</span>/a<span class="gr">&gt;</span>
+  <span class="gr">&lt;</span>a <b>class</b>=<span class="st">"button-large disabled"</span><span class="gr">&gt;</span><span class="bl">button</span><span class="gr">&lt;</span>/a<span class="gr">&gt;</span>
+        </code>
+
+        <p>
+          <a class="button-small">button-small</a>
+          <a class="button-small disabled">button-small</a>
+          <a class="button">button</a>
+          <a class="button disabled">button</a>
+          <a class="button-large">button-large</a>
+          <a class="button-large disabled">button-large</a>
+        </p>
+
+        <p>
+          Buttons can be disabled using the .disabled class, or the disabled attribute:
+        </p>
+
+        <code class="well">
+  <span class="gr">&lt;</span>a <b>class</b>=<span class="st">"button disabled"</span><span class="gr">&gt;</span><span class="bl">button</span><span class="gr">&lt;</span>/a<span class="gr">&gt;</span>
+  <span class="gr">&lt;</span>a <b>disabled</b> <b>class</b>=<span class="st">"button"</span><span class="gr">&gt;</span><span class="bl">button</span><span class="gr">&lt;</span>/a<span class="gr">&gt;</span>
+        </code>
+
+        <p>
+          These both render the same thing:
+        </p>
+
+        <a class="button disabled">button</a>
+        <a disabled class="button">button</a>
+        <h2><hr />Wells</h2>
+
+        <code class="well">
+  <span class="gr">&lt;</span>div <b>class</b>=<span class="st">"well"</span><span class="gr">&gt;</span>
+    <span class="gr">&lt;</span>div <b>style</b>=<span class="st">"padding:10px;"</span><span class="gr">&gt;</span>
+      <span class="bl">This is a well!</span>
+    <span class="gr">&lt;</span>/div<span class="gr">&gt;</span>
+  <span class="gr">&lt;</span>/div<span class="gr">&gt;</span>
+
+  <span class="gr">&lt;</span>div <b>class</b>=<span class="st">"well-inverse"</span><span class="gr">&gt;</span>
+    <span class="gr">&lt;</span>div <b>style</b>=<span class="st">"padding:10px;"</span><span class="gr">&gt;</span>
+      <span class="bl">This is an inverse well!</span>
+    <span class="gr">&lt;</span>/div<span class="gr">&gt;</span>
+  <span class="gr">&lt;</span>/div<span class="gr">&gt;</span>
+        </code>
+
+        <p>This will render:</p>
+
+        <div class="well">
+          <div style="padding:10px;">
+            This is a well!
+          </div>
+        </div>
+
+        <br />
+
+        <div class="well-inverse">
+          <div style="padding:10px;">
+            This is an inverse well!
+          </div>
+        </div>
+
+        <h2><hr />Titles</h2>
+
+        <div class="well-inverse">
+          <div id="demo-title" class="title">
+            <span>Title</span>
+            <div class="controls">
+              <a class="control-button">_</a>
+              <a class="control-button">X</a>
+            </div>
+          </div>
+          <div style="padding:10px;">
+            <code class="well">
+  <span class="gr">&lt;</span>div <b>class</b>=<span class="st">"well-inverse"</span><span class="gr">&gt;</span>
+
+    <span class="gr">&lt;</span>div <b>id</b>=<span class="st">"demo-title"</span> <b>class</b>=<span id="fancy-title-class" class="st">"title"</span><span class="gr">&gt;</span>
+      <span class="gr">&lt;</span>span><span class="bl">Title</span><span class="gr">&lt;</span>/span<span class="gr">&gt;</span>
+
+      <span class="gr">&lt;</span>div <b>class</b>=<span class="st">"controls"</span><span class="gr">&gt;</span>
+        <span class="gr">&lt;</span>a <b>class</b>=<span class="st">"control-button"</span><span class="gr">&gt;</span><span class="bl">_</span><span class="gr">&lt;</span>/a<span class="gr">&gt;</span>
+        <span class="gr">&lt;</span>a <b>class</b>=<span class="st">"control-button"</span><span class="gr">&gt;</span><span class="bl">X</span><span class="gr">&lt;</span>/a<span class="gr">&gt;</span>
+      <span class="gr">&lt;</span>/div<span class="gr">&gt;</span>
+
+    <span class="gr">&lt;</span>/div<span class="gr">&gt;</span>
+
+    <span class="gr">&lt;</span>div <b>style</b>=<span class="st">"padding:10px;"</span><span class="gr">&gt;</span>
+      <span class="cm"><span class="gr">&lt;</span>!-- Content here --<span class="gr">&gt;</span></span>
+    <span class="gr">&lt;</span>/div<span class="gr">&gt;</span>
+
+  <span class="gr">&lt;</span>/div<span class="gr">&gt;</span>
+            </code>
+            <p>You can add a title bar to any well to make it look like a window! Use these buttons to see different kinds of titles.</p>
+            <a class="button" onclick="toggleFancyTitle()">Toggle Fancy</a>
+            <a class="button" onclick="toggleTitleFocus()">Toggle Focus</a>
+          </div>
+        </div>
+
+        <h2><hr />Groups</h2>
+
+        <p>Groups are an alternate way to group controls and information together on a page/form.
+        Note that because of the way groups render background color and titles, they're best used
+        inside of a well or element with the same background color as a well. This may change in
+        the future...</p>
+
+        <code class="well">
+  <span class="gr">&lt;</span>div <b>style</b>=<span class="st">"padding:10px;"</span><span class="gr">&gt;</span>
+    <span class="gr">&lt;</span>div <b>data-group-title</b>=<span class="st">"This is a group"</span> <b>class</b>=<span class="st">"group"</span><span class="gr">&gt;</span>
+      <span class="gr">&lt;</span>h3<span class="gr">&gt;</span><span class="bl">Groups are great!</span><span class="gr">&lt;</span>/h3<span class="gr">&gt;</span>
+    <span class="gr">&lt;</span>/div<span class="gr">&gt;</span>
+  <span class="gr">&lt;</span>/div<span class="gr">&gt;</span>
+        </code>
+
+        <p>This will render the following:</p>
+
+          <div style="padding:10px;">
+            <div data-group-title="This is a group" class="group">
+              <h3>Groups are great!</h3>
+            </div>
+          </div>
+
+        <p>The <b>data-group-title</b> attribute denotes the title of the group that appears in the top left corner.</p>
+
+        <h2><hr />Inputs</h2>
+
+        <p>At the moment, only text inputs are supported. Apply the <b>.input-text</b> class to any
+        text input and you will render the following:</p>
+
+        <input class="input-text" type="text" placeholder="text input" />
+
+        <h2>Menu</h2>
+
+        <a data-menu="#my-menu" class="button" disabled>Not implemented</a>
+
+      </div>
+    </div>
+
+<!-- Work in progress -->
+    <!-- <footer class="footer">
+      <div style="padding:1px 4px;">
+        <a class="button-small">&#9827; <b>Start</b></a>
+        <div class="well" style="float:right;">
+          <div style="padding:3px;">
+            12:00 PM
+          </div>
+        </div>
+      </div>
+    </footer> -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="./dist/js/space-cadet.js"></script>
+<script src="./demo_script.js"></script>
+
+</body>
+</html>

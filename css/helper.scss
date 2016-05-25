@@ -1,0 +1,14 @@
+.background {
+  background-color: $wallpaper;
+}
+
+hr {
+  border-top: 1px solid rgb(152, 154, 159);
+  border-bottom: 1px solid white;
+}
+
+.space-font {
+  font-family: $form-font;
+  -webkit-font-smoothing: none;
+  -moz-osx-font-smoothing: none;
+}

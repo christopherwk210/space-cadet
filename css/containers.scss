@@ -1,0 +1,97 @@
+//Wells
+.well {
+  @include form-control-down();
+  padding: 1px;
+  position: relative;
+  font-size:11px;
+}
+
+.well-inverse {
+  @include window();
+  padding: 1px;
+  position: relative;
+  font-size:11px;
+}
+
+//Well titles
+.title {
+  background-color:$window-title;
+  color:white;
+
+  height:19px;
+  width:100%;
+
+  line-height:19px;
+  text-align:left;
+  font-size:11px;
+  font-family: $form-font;
+  font-weight:bold;
+  vertical-align:middle;
+
+  user-select: none;
+  -webkit-touch-callout: none;
+
+  cursor: default;
+
+  span {
+    padding-left: 2px;
+    padding-right: 2px;
+  }
+}
+
+.title-inactive {
+  @extend .title;
+  color: $form-bg;
+  background-color:$border-dark;
+}
+
+.title-fancy {
+  @extend .title;
+  background: $title-gradient-left;
+  background: -moz-linear-gradient(left,  $title-gradient-left 0%, $title-gradient-right 100%);
+  background: -webkit-linear-gradient(left,  $title-gradient-left 0%,$title-gradient-right 100%);
+  background: linear-gradient(to right,  $title-gradient-left 0%,$title-gradient-right 100%);
+}
+
+.title-fancy-inactive {
+  @extend .title;
+  color: #bdbdbd;
+  background: $title-inactive-gradient-left;
+  background: -moz-linear-gradient(left,  $title-inactive-gradient-left 0%, $title-inactive-gradient-right 100%);
+  background: -webkit-linear-gradient(left,  $title-inactive-gradient-left 0%,$title-inactive-gradient-right 100%);
+  background: linear-gradient(to right,  $title-inactive-gradient-left 0%,$title-inactive-gradient-right 100%);
+}
+
+//Used to put control box in well title
+.controls {
+  float: right;
+  padding-right: 2px;
+  padding-top: 2px;
+  padding-bottom: 0;
+  color: black;
+  line-height:normal;
+}
+
+//Form group
+.group {
+  border: 1px solid $border-dark;
+  box-shadow: 1px 1px 0 0 white, 1px 1px 0 0 white inset;
+
+  background-color: $form-bg;
+  padding:6px;
+  padding-top: 8px;
+  position:relative;
+  margin-top: 6px;
+
+  &::before {
+    content: attr(data-group-title);
+    font-size: 11px;
+    position: absolute;
+    background-color:$form-bg;
+    top: -7px;
+    padding: 0 3px;
+    user-select: none;
+    -webkit-touch-callout: none;
+    cursor: default;
+  }
+}

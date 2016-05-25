@@ -1,0 +1,11 @@
+.input-text {
+  font-family: $form-font;
+  border: 1px solid;
+  border-bottom-color: $form-bg;
+  border-right-color: $form-bg;
+  border-top-color: $border-dark;
+  border-left-color: $border-dark;
+  box-shadow: 1px 1px 0 0 black inset, 1px 1px 0 0 white;
+  background-color:white;
+  padding: 4px;
+}
